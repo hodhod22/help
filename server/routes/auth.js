@@ -1,6 +1,7 @@
 import { Router } from "express";
 import User from "../models/User.js";
 import { generateToken, verifyToken } from "../lib/jwt.js";
+import { protect } from "../middleware/auth.js";
 import passport from "../config/passport.js";
 
 const router = Router();
@@ -30,7 +31,7 @@ router.post("/register", async (req, res) => {
   }
 });
 
-// Inloggning med e-post/lösenord
+// Inloggning
 router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -66,6 +67,22 @@ router.get("/me", async (req, res) => {
     res.json(user);
   } catch (error) {
     res.status(500).json({ error: "Kunde inte hämta användare" });
+  }
+});
+
+// 🆕 Uppdatera profil (namn, avatar)
+router.put("/users/profile", protect, async (req, res) => {
+  try {
+    const { name, avatar } = req.body;
+    const user = await User.findByIdAndUpdate(
+      req.user.id,
+      { name, avatar },
+      { new: true, runValidators: true },
+    ).select("-password");
+    res.json(user);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Kunde inte uppdatera profil" });
   }
 });
 

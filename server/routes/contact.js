@@ -3,7 +3,7 @@ import ContactMessage from "../models/ContactMessage.js";
 import User from "../models/User.js";
 import { contactMessage, pickLang } from "../lib/contactMessages.js";
 import { verifyToken } from "../lib/jwt.js";
-
+import { protect } from "../middleware/auth.js";
 const router = Router();
 
 router.post("/", async (req, res) => {
@@ -46,5 +46,14 @@ router.post("/", async (req, res) => {
     return res.status(500).json({ error: contactMessage("saveFailed", lang) });
   }
 });
-
+// 🆕 GET /my – hämta inloggad användares egna meddelanden
+router.get("/my", protect, async (req, res) => {
+  try {
+    const messages = await ContactMessage.find({ userId: req.user.id }).sort({ createdAt: -1 });
+    res.json(messages);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Kunde inte hämta meddelanden" });
+  }
+});
 export default router;
