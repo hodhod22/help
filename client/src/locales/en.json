@@ -123,6 +123,7 @@
     "dismiss": "Dismiss",
     "name": "Name",
     "email": "Email",
+    "phone": "Phone number",
     "company": "Municipality or other agency",
     "companyOptional": "(optional)",
     "message": "Message",

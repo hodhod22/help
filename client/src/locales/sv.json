@@ -123,6 +123,7 @@
     "dismiss": "Stäng",
     "name": "Namn",
     "email": "E-post",
+    "phone": "Telefonnummer",
     "company": "Kommun eller annan instans",
     "companyOptional": "(valfritt)",
     "message": "Meddelande",
