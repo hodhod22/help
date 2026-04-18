@@ -1,43 +1,30 @@
-import i18n from 'i18next'
-import { initReactI18next } from 'react-i18next'
-import LanguageDetector from 'i18next-browser-languagedetector'
-import en from '../locales/en.json'
-import sv from '../locales/sv.json'
-import ar from '../locales/ar.json'
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
 
-export const SUPPORTED_LANGS = [
-  { code: 'en', label: 'EN' },
-  { code: 'sv', label: 'SV' },
-  { code: 'ar', label: 'العربية' },
-]
-
-function applyDocumentLang(lng) {
-  if (typeof document === 'undefined') return
-  const base = String(lng || 'sv').split('-')[0]
-  document.documentElement.lang = base
-  document.documentElement.dir = i18n.dir(base)
-}
+const loadTranslations = async (lng) => {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/translations`);
+  const translations = await response.json();
+  const resources = {};
+  translations.forEach((t) => {
+    if (!resources[t.key]) resources[t.key] = {};
+    resources[t.key][lng] = t[lng];
+  });
+  return resources;
+};
 
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    resources: {
-      en: { translation: en },
-      sv: { translation: sv },
-      ar: { translation: ar },
-    },
-    fallbackLng: 'sv',
-    supportedLngs: ['en', 'sv', 'ar'],
-    load: 'languageOnly',
+    fallbackLng: "sv",
     interpolation: { escapeValue: false },
-    detection: {
-      order: ['localStorage', 'navigator'],
-      caches: ['localStorage'],
-    },
-  })
+    resources: {},
+  });
 
-applyDocumentLang(i18n.language)
-i18n.on('languageChanged', applyDocumentLang)
+// Ladda översättningar vid start
+loadTranslations(i18n.language).then((resources) => {
+  i18n.addResources(i18n.language, "translation", resources);
+});
 
-export default i18n
+export default i18n;
