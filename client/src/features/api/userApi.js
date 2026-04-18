@@ -64,6 +64,13 @@ export const userApi = createApi({
       }),
       invalidatesTags: ["User"],
     }),
+    register: builder.mutation({
+      query: (userData) => ({
+        url: "/auth/register",
+        method: "POST",
+        body: userData,
+      }),
+    }),
   }),
 });
 

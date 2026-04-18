@@ -12,7 +12,7 @@ import AdminMessages from "./pages/Admin/AdminMessages";
 import AdminUsers from "./pages/Admin/AdminUsers";
 import AdminTranslations from "./pages/Admin/AdminTranslations";
 import ProtectedRoute from "./components/ProtectedRoute";
-
+import Register from "./pages/Register";
 function App() {
   return (
     <>
@@ -23,6 +23,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/auth/callback" element={<AuthCallback />} />
         <Route
           path="/profile"

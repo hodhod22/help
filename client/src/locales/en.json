@@ -115,19 +115,71 @@
     "statProjectsValue": "500+"
   },
   "contact": {
-    "title": "Contact",
-    "intro": "Briefly say who you are and what your everyday life looks like — especially if it concerns personal assistance at home or out in life. If you are under 18, an adult relative or guardian often needs to contact us. We respond within a few business days.",
-    "apiNote": "Messages are stored in your MongoDB via the API at",
-    "success": "Thank you! We have received your message.",
-    "errorGeneric": "Something went wrong. Make sure the API is running and try again.",
-    "dismiss": "Dismiss",
+    "title": "Contact us",
+   "intro": "Briefly say who you are and what your everyday life looks like — especially if it concerns personal assistance at home or out in life. If you are under 18, an adult relative or guardian often needs to contact us. We respond within a few business days.",
+  "apiNote": "Messages are stored in your MongoDB via the API at",
     "name": "Name",
-    "email": "Email",
+    "email": "Email address",
     "phone": "Phone number",
-    "company": "Municipality or other agency",
+    "company": "Organization/company",
     "companyOptional": "(optional)",
     "message": "Message",
-    "submit": "Send",
-    "submitting": "Sending…"
+    "submit": "Send message",
+    "submitting": "Sending...",
+    "success": "Thank you! We have received your message and will get back to you shortly.",
+    "errorGeneric": "Something went wrong. Please try again later.",
+    "dismiss": "Close"
+  },
+  "common": {
+    "login": "Login",
+    "logout": "Logout",
+    "profile": "My profile",
+    "admin": "Admin panel",
+    "loading": "Loading..."
+  },
+  "profile": {
+    "title": "My profile",
+    "editProfile": "Edit profile",
+    "save": "Save",
+    "saving": "Saving...",
+    "myMessages": "My messages",
+    "noMessages": "You haven't sent any messages yet."
+  },
+  "admin": {
+    "dashboard": "Admin Dashboard",
+    "messages": "Messages",
+    "users": "Users",
+    "editTranslations": "Edit texts",
+    "totalMessages": "Total messages",
+    "totalUsers": "Total users",
+    "viewAll": "View all",
+    "manageUsers": "Manage users",
+    "role": "Role",
+    "actions": "Actions",
+    "edit": "Edit"
+  },
+  "auth": {
+    "login": "Login",
+    "email": "Email",
+    "password": "Password",
+    "loggingIn": "Logging in...",
+    "loginError": "Login failed",
+    "loginWithGoogle": "Login with Google"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "name": "Name",
+    "loggingIn": "Logging in...",
+    "registering": "Registering...",
+    "loginError": "Login failed",
+    "registerError": "Registration failed",
+    "loginWithGoogle": "Login with Google",
+    "noAccount": "Don't have an account? Register",
+    "alreadyHaveAccount": "Already a member? Login",
+    "passwordsDontMatch": "Passwords do not match"
   }
 }

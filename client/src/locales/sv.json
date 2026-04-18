@@ -115,19 +115,71 @@
     "statProjectsValue": "500+"
   },
   "contact": {
-    "title": "Kontakt",
+    "title": "Kontakta oss",
     "intro": "Skriv kort vem du är och hur din vardag ser ut — särskilt om det gäller personlig assistans hemma eller ute i livet. Om du är under 18 behöver ofta en vuxen närstående eller god man kontakta oss. Vi återkommer inom några arbetsdagar.",
     "apiNote": "Meddelanden sparas i er MongoDB via API:t under",
-    "success": "Tack! Vi har tagit emot ditt meddelande.",
-    "errorGeneric": "Något gick fel. Kontrollera att API:t körs och försök igen.",
-    "dismiss": "Stäng",
     "name": "Namn",
-    "email": "E-post",
+    "email": "E-postadress",
     "phone": "Telefonnummer",
-    "company": "Kommun eller annan instans",
-    "companyOptional": "(valfritt)",
+    "company": "Organisation/företag",
+    "companyOptional": "(frivilligt)",
     "message": "Meddelande",
-    "submit": "Skicka",
-    "submitting": "Skickar…"
+    "submit": "Skicka meddelande",
+    "submitting": "Skickar...",
+    "success": "Tack! Vi har mottagit ditt meddelande och återkommer inom kort.",
+    "errorGeneric": "Något gick fel. Försök igen senare.",
+    "dismiss": "Stäng"
+  },
+  "common": {
+    "login": "Logga in",
+    "logout": "Logga ut",
+    "profile": "Min sida",
+    "admin": "Adminpanel",
+    "loading": "Laddar..."
+  },
+  "profile": {
+    "title": "Min profil",
+    "editProfile": "Redigera profil",
+    "save": "Spara",
+    "saving": "Sparar...",
+    "myMessages": "Mina meddelanden",
+    "noMessages": "Du har inga skickade meddelanden än."
+  },
+  "admin": {
+    "dashboard": "Adminpanel",
+    "messages": "Meddelanden",
+    "users": "Användare",
+    "editTranslations": "Redigera texter",
+    "totalMessages": "Totalt meddelanden",
+    "totalUsers": "Totalt användare",
+    "viewAll": "Visa alla",
+    "manageUsers": "Hantera användare",
+    "role": "Roll",
+    "actions": "Åtgärder",
+    "edit": "Redigera"
+  },
+  "auth": {
+    "login": "Logga in",
+    "email": "E-post",
+    "password": "Lösenord",
+    "loggingIn": "Loggar in...",
+    "loginError": "Fel vid inloggning",
+    "loginWithGoogle": "Logga in med Google"
+  },
+  "auth": {
+    "login": "Logga in",
+    "register": "Registrera",
+    "email": "E-post",
+    "password": "Lösenord",
+    "confirmPassword": "Bekräfta lösenord",
+    "name": "Namn",
+    "loggingIn": "Loggar in...",
+    "registering": "Registrerar...",
+    "loginError": "Fel vid inloggning",
+    "registerError": "Registrering misslyckades",
+    "loginWithGoogle": "Logga in med Google",
+    "noAccount": "Har du inget konto? Registrera dig",
+    "alreadyHaveAccount": "Redan medlem? Logga in",
+    "passwordsDontMatch": "Lösenorden matchar inte"
   }
 }
