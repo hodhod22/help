@@ -1,46 +1,34 @@
-import "dotenv/config";
-import cors from "cors";
 import express from "express";
 import mongoose from "mongoose";
-import contactRoutes from "./routes/contact.js";
+import cors from "cors";
+import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import passport from "./config/passport.js";
+import contactRoutes from "./routes/contact.js";
 import authRoutes from "./routes/auth.js";
 import adminRoutes from "./routes/admin.js";
+import translationRoutes from "./routes/translations.js";
+
+dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/konsult";
-// ... middleware
+
+// Middleware
+app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
+app.use(express.json());
 app.use(cookieParser());
 app.use(passport.initialize());
 
-// ... routes
+// Routes
+app.use("/api/contact", contactRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/admin", adminRoutes);
-app.use(
-  cors({
-    origin: process.env.CLIENT_ORIGIN || "http://localhost:5173",
-    credentials: true,
+app.use("/api/translations", translationRoutes);
+
+// MongoDB connection
+mongoose
+  .connect(process.env.MONGODB_URI)
+  .then(() => {
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
   })
-);
-app.use(express.json());
-
-app.get("/api/health", (_req, res) => {
-  res.json({ ok: true, service: "stodpartner-api" });
-});
-
-app.use("/api/contact", contactRoutes);
-
-async function main() {
-  await mongoose.connect(MONGODB_URI);
-  console.log("MongoDB ansluten");
-
-  app.listen(PORT, () => {
-    console.log(`API lyssnar på http://localhost:${PORT}`);
-  });
-}
-
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+  .catch((err) => console.error(err));

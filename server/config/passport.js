@@ -1,8 +1,16 @@
-// server/config/passport.js
+import dotenv from "dotenv";
+dotenv.config(); // ← allra överst
+
 import passport from "passport";
 import { Strategy as GoogleStrategy } from "passport-google-oauth20";
 import User from "../models/User.js";
 import { generateToken } from "../lib/jwt.js";
+
+// Validering
+if (!process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET) {
+  console.error("❌ Google OAuth credentials missing in .env");
+  process.exit(1);
+}
 
 passport.use(
   new GoogleStrategy(

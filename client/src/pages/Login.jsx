@@ -20,7 +20,7 @@ export default function Login() {
       dispatch(setCredentials({ user: result.user, token: result.token }));
       navigate(result.user.role === "admin" ? "/admin" : "/profile");
     } catch (err) {
-      console.error("Login failed", err);
+      console.error(err);
     }
   };
 

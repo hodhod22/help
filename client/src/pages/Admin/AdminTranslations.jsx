@@ -32,7 +32,6 @@ export default function AdminTranslations() {
     );
     setEditing(null);
     fetchTranslations();
-    // Uppdatera i18n
     i18n.addResourceBundle(
       i18n.language,
       "translation",
@@ -45,7 +44,7 @@ export default function AdminTranslations() {
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-6">{t("admin.editTranslations")}</h1>
-      <div className="bg-white rounded-lg shadow overflow-hidden">
+      <div className="bg-white rounded-lg shadow overflow-x-auto">
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr>

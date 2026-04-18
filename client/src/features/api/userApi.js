@@ -18,7 +18,6 @@ export const userApi = createApi({
   }),
   tagTypes: ["User", "Messages"],
   endpoints: (builder) => ({
-    // Registrering
     register: builder.mutation({
       query: (userData) => ({
         url: "/auth/register",
@@ -26,7 +25,6 @@ export const userApi = createApi({
         body: userData,
       }),
     }),
-    // Inloggning
     login: builder.mutation({
       query: (credentials) => ({
         url: "/auth/login",
@@ -34,17 +32,14 @@ export const userApi = createApi({
         body: credentials,
       }),
     }),
-    // Hämta aktuell användare
     getMe: builder.query({
       query: () => "/auth/me",
       providesTags: ["User"],
     }),
-    // Hämta användarens egna meddelanden
     getUserMessages: builder.query({
       query: () => "/messages/my",
       providesTags: ["Messages"],
     }),
-    // Uppdatera profil
     updateProfile: builder.mutation({
       query: (userData) => ({
         url: "/users/profile",
@@ -53,17 +48,14 @@ export const userApi = createApi({
       }),
       invalidatesTags: ["User"],
     }),
-    // Admin: hämta alla meddelanden
     getAllMessages: builder.query({
       query: () => "/admin/messages",
       providesTags: ["Messages"],
     }),
-    // Admin: hämta alla användare
     getAllUsers: builder.query({
       query: () => "/admin/users",
       providesTags: ["User"],
     }),
-    // Admin: uppdatera användarroll
     updateUserRole: builder.mutation({
       query: ({ userId, role }) => ({
         url: `/admin/users/${userId}/role`,

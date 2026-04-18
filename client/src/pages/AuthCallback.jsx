@@ -12,7 +12,6 @@ export default function AuthCallback() {
     const params = new URLSearchParams(location.search);
     const token = params.get("token");
     const userParam = params.get("user");
-
     if (token && userParam) {
       const user = JSON.parse(decodeURIComponent(userParam));
       dispatch(setCredentials({ user, token }));
@@ -22,5 +21,5 @@ export default function AuthCallback() {
     }
   }, [dispatch, location, navigate]);
 
-  return <div className="text-center mt-10">Laddar...</div>;
+  return <div className="text-center mt-10">{t("common.loading")}</div>;
 }

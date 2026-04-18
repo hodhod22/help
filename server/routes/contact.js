@@ -1,8 +1,9 @@
 import { Router } from "express";
 import ContactMessage from "../models/ContactMessage.js";
+import User from "../models/User.js";
 import { contactMessage, pickLang } from "../lib/contactMessages.js";
-import { verifyToken } from "../lib/jwt.js";      // ← Importera verifyToken
-import User from "../models/User.js";             // ← Importera User-modellen
+import { verifyToken } from "../lib/jwt.js";
+
 const router = Router();
 
 router.post("/", async (req, res) => {
@@ -15,7 +16,7 @@ router.post("/", async (req, res) => {
         .json({ error: contactMessage("validation", lang) });
     }
 
-    // 🆕 Hämta användar-ID från token (om inloggad)
+    // Hämta userId från token om inloggad
     let userId = null;
     const authHeader = req.headers.authorization;
     if (authHeader) {
@@ -33,7 +34,6 @@ router.post("/", async (req, res) => {
       userId,
     });
 
-    // 🆕 Uppdatera användarens messages-array
     if (userId) {
       await User.findByIdAndUpdate(userId, { $push: { messages: doc._id } });
     }

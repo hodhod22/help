@@ -19,7 +19,7 @@ export default function Profile() {
     try {
       await updateProfile({ name }).unwrap();
     } catch (err) {
-      console.error("Update failed", err);
+      console.error(err);
     }
   };
 
@@ -28,7 +28,6 @@ export default function Profile() {
   return (
     <div className="max-w-4xl mx-auto p-6">
       <h1 className="text-2xl font-bold mb-6">{t("profile.title")}</h1>
-
       <div className="bg-white rounded-lg shadow p-6 mb-8">
         <h2 className="text-xl font-semibold mb-4">
           {t("profile.editProfile")}
@@ -49,7 +48,6 @@ export default function Profile() {
           </button>
         </form>
       </div>
-
       <div className="bg-white rounded-lg shadow p-6">
         <h2 className="text-xl font-semibold mb-4">
           {t("profile.myMessages")}
@@ -65,7 +63,7 @@ export default function Profile() {
                 <p className="font-medium">{msg.message}</p>
                 <div className="text-sm text-gray-500 mt-2">
                   <p>📧 {msg.email}</p>
-                  <p>📞 {msg.phone}</p> {/* 🆕 */}
+                  <p>📞 {msg.phone}</p>
                   <p>📅 {new Date(msg.createdAt).toLocaleDateString()}</p>
                 </div>
               </div>

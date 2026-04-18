@@ -4,7 +4,7 @@ import { protect, adminOnly } from "../middleware/auth.js";
 
 const router = Router();
 
-// Hämta alla översättningar (öppen för alla)
+// Hämta alla översättningar (öppen)
 router.get("/", async (req, res) => {
   try {
     const translations = await Translation.find();
@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// Uppdatera översättning (endast admin)
+// Uppdatera en översättning (endast admin)
 router.put("/:key", protect, adminOnly, async (req, res) => {
   try {
     const { key } = req.params;

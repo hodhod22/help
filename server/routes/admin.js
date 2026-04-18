@@ -4,8 +4,6 @@ import User from "../models/User.js";
 import { protect, adminOnly } from "../middleware/auth.js";
 
 const router = Router();
-
-// Alla admin-routes kräver autentisering och admin-roll
 router.use(protect, adminOnly);
 
 // Hämta alla meddelanden
@@ -34,9 +32,8 @@ router.get("/users", async (req, res) => {
 router.put("/users/:id/role", async (req, res) => {
   try {
     const { role } = req.body;
-    if (!["user", "admin"].includes(role)) {
+    if (!["user", "admin"].includes(role))
       return res.status(400).json({ error: "Ogiltig roll" });
-    }
     const user = await User.findByIdAndUpdate(
       req.params.id,
       { role },
@@ -46,12 +43,6 @@ router.put("/users/:id/role", async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: "Kunde inte uppdatera roll" });
   }
-});
-
-// Hämta översättningar för admin-redigering (se nästa avsnitt)
-router.get("/translations", async (req, res) => {
-  // Detta kräver en modell för att lagra översättningar
-  // Vi återkommer till detta
 });
 
 export default router;

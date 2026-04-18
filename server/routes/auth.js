@@ -1,39 +1,17 @@
 import { Router } from "express";
 import User from "../models/User.js";
-import { generateToken } from "../lib/jwt.js";
+import { generateToken, verifyToken } from "../lib/jwt.js";
 import passport from "../config/passport.js";
 
 const router = Router();
 
-// Initiera Google-inloggning
-router.get(
-  "/google",
-  passport.authenticate("google", { scope: ["profile", "email"] }),
-);
-
-// Callback efter Google-inloggning
-router.get(
-  "/google/callback",
-  passport.authenticate("google", {
-    session: false,
-    failureRedirect: "/login",
-  }),
-  (req, res) => {
-    const { user, token } = req.user;
-    // Omdirigera till frontend med token i URL:en
-    res.redirect(
-      `${process.env.FRONTEND_URL}/auth/callback?token=${token}&user=${encodeURIComponent(JSON.stringify(user))}`,
-    );
-  },
-);
-// Registrering med e-post/lösenord
+// Registrering
 router.post("/register", async (req, res) => {
   try {
     const { name, email, password } = req.body;
     const existingUser = await User.findOne({ email });
-    if (existingUser) {
+    if (existingUser)
       return res.status(400).json({ error: "E-postadressen används redan" });
-    }
     const user = await User.create({ name, email, password });
     const token = generateToken(user._id, user.role);
     res
@@ -76,7 +54,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
-// Hämta aktuell användare (för att verifiera token)
+// Hämta aktuell användare
 router.get("/me", async (req, res) => {
   try {
     const authHeader = req.headers.authorization;
@@ -90,5 +68,25 @@ router.get("/me", async (req, res) => {
     res.status(500).json({ error: "Kunde inte hämta användare" });
   }
 });
+
+// Google OAuth
+router.get(
+  "/google",
+  passport.authenticate("google", { scope: ["profile", "email"] }),
+);
+
+router.get(
+  "/google/callback",
+  passport.authenticate("google", {
+    session: false,
+    failureRedirect: "/login",
+  }),
+  (req, res) => {
+    const { user, token } = req.user;
+    res.redirect(
+      `${process.env.FRONTEND_URL}/auth/callback?token=${token}&user=${encodeURIComponent(JSON.stringify(user))}`,
+    );
+  },
+);
 
 export default router;
