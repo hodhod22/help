@@ -1,0 +1,132 @@
+{
+  "brand": {
+    "prefix": "Stöd",
+    "suffix": "Partner"
+  },
+  "meta": {
+    "title": "StödPartner — Personlig assistans i hemmet och vardagen",
+    "description": "Vår viktigaste målgrupp är du som behöver personlig assistans hemma och i vardagen. Vi ger också stöd i kontakt med socialtjänst och Försäkringskassan i Sverige."
+  },
+  "nav": {
+    "language": "Språk",
+    "home": "Hem",
+    "services": "Tjänster",
+    "about": "Om oss",
+    "contact": "Kontakt",
+    "mainLabel": "Huvudmeny",
+    "mobileLabel": "Mobilmeny"
+  },
+  "header": {
+    "bookCall": "Boka samtal",
+    "menu": "Meny"
+  },
+  "footer": {
+    "tagline": "Det viktigaste för oss är människor som behöver personlig assistans i hemmet och i vardagslivet. Utöver det stöttar vi även utsatta barn och vuxna samt andra som behöver hjälp i kontakt med socialtjänst och Försäkringskassan.",
+    "quickLinks": "Snabblänkar",
+    "contactHeading": "Kontakt",
+    "location": "Hela Sverige — digitalt och där det går, på plats",
+    "linkedin": "LinkedIn",
+    "rights": "StödPartner. Alla rättigheter förbehållna.",
+    "disclaimer": "Vi bedriver inte juridisk rådgivning eller fattar myndighetsbeslut. Vid behov av jurist eller offentlig försvarare hjälper vi dig att förstå var du kan vända dig."
+  },
+  "home": {
+    "eyebrow": "Personlig assistans — hemma och i vardagen",
+    "heroTitle": "Livet hemma och ute ska fungera — med den personliga assistans du behöver.",
+    "heroLead": "Det viktigaste för oss är du som behöver assistans i hemmet och i vardagen: vila, hygien, måltider, skola, jobb, fritid och delaktighet. När socialtjänst eller Försäkringskassan ska samverka kring din assistans hjälper vi dig förbereda och förstå — i din takt, med respekt för din integritet.",
+    "ctaPrimary": "Boka ett första samtal",
+    "ctaSecondary": "Läs om våra tjänster",
+    "whyTitle": "Varför kontakta oss?",
+    "whyLead": "Vi vet att assistans handlar om vardagen — inte bara om papper. Samtidigt har vi erfarenhet av hur Försäkringskassan och socialtjänsten påverkar hur assistansen kan utformas, och möter dig utan värderingar.",
+    "highlights": [
+      {
+        "id": "homeLife",
+        "title": "Hemmet och vardagen först",
+        "text": "Det viktigaste för oss är att din personliga assistans ska ge trygghet och delaktighet där livet sker: hemma, i skolan, på jobbet och på fritiden — utifrån vad som är viktigt för just dig."
+      },
+      {
+        "id": "support",
+        "title": "Du möts med respekt",
+        "text": "Vi utgår från dina behov, din integritet och dina önskemål — oavsett bakgrund, språk eller funktionsnedsättning."
+      },
+      {
+        "id": "clarity",
+        "title": "När myndigheter påverkar vardagen",
+        "text": "När socialtjänst eller Försäkringskassan berör din assistans hjälper vi dig förbereda samtal, strukturera underlag och förstå nästa steg — så att fokus får ligga på livet, inte bara på processen."
+      }
+    ],
+    "bannerTitle": "Funderar du på assistans hemma eller i vardagen?",
+    "bannerLead": "Ett första samtal utan krav — berätta kort hur din vardag ser ut och vad du vill få till, så ser vi om vi kan stötta dig.",
+    "bannerCta": "Kontakta oss"
+  },
+  "services": {
+    "title": "Tjänster",
+    "intro": "Vår främsta prioritering är dig som behöver personlig assistans i hemmet och i vardagen. Vi arbetar också med familjer och ibland ideella organisationer — från enstaka timmar till ett fåtal tillfällen, utifrån din situation.",
+    "items": [
+      {
+        "id": "personalAssist",
+        "title": "Personlig assistans i hemmet och vardagen",
+        "text": "Det här är vårt viktigaste fokus: att assistansen ska stödja livet där det levs — sömn, måltider, hygien, skola, arbete, fritid och socialt umgänge. Vi kan stötta i planering, dialog med assistenter och närstående, samt när socialtjänst och Försäkringskassan ska samordnas så att du får stabilt stöd dygnet runt."
+      },
+      {
+        "id": "insurance",
+        "title": "Försäkringskassan & assistansersättning",
+        "text": "Genomgång av ansökningar och beslut som rör din ekonomi kring assistans och närliggande ersättningar — och hur du kan begära omprövning eller komplettera underlag."
+      },
+      {
+        "id": "social",
+        "title": "Socialtjänst & bistånd",
+        "text": "Stöd när socialtjänsten berör din assistans eller ditt bistånd: biståndsbedömningar, barn- och familjeärenden, skyddat boende och andra insatser enligt socialtjänstlagen."
+      },
+      {
+        "id": "children",
+        "title": "Barn och unga i utsatthet",
+        "text": "Stöd till barn, unga och vårdnadshavare i kontakt med skola, socialtjänst och hälso- och sjukvård — med extra omsorg om delaktighet och trygghet."
+      },
+      {
+        "id": "disability",
+        "title": "Funktionsnedsättning & LSS",
+        "text": "Översikt av stödformer enligt LSS och närliggande regelverk, samordning av insatser och förberedelse inför utredningar och möten."
+      },
+      {
+        "id": "appeals",
+        "title": "Överklaganden & omprövning",
+        "text": "Hur du skriver en begäran om omprövning, viktiga tidsfrister och vad som kan vara bra att dokumentera — utan att ersätta juridisk rådgivning."
+      },
+      {
+        "id": "coordination",
+        "title": "Samordning & tillgänglighet",
+        "text": "När många instanser är inblandade: tidslinje, underlag och behov av ledsagning, tolk eller enkelt språk i kontakter."
+      }
+    ]
+  },
+  "about": {
+    "title": "Om oss",
+    "p1": "StödPartner är en konsultverksamhet där det viktigaste är människor som behöver personlig assistans hemma och i vardagen. Vi stöttar också utsatta barn och vuxna samt andra som behöver hjälp i kontakt med socialtjänst och Försäkringskassan. Vi har erfarenhet av hur assistans, socialförsäkring och kommun hänger ihop i praktiken.",
+    "p2": "Vi kan inte lösa allt åt dig och vi fattar inga beslut åt myndigheter — men vi kan göra vägen mindre ensam: förklara, förbereda och finnas vid din sida i det som känns övermäktigt.",
+    "howTitle": "Så jobbar vi",
+    "principles": [
+      "Din integritet och säkerhet går före — särskilt i ärenden som rör barn och våld eller hot.",
+      "Vi utgår från gällande regelverk i Sverige och tydliggör när du behöver jurist, patientnämnd eller annan specialist.",
+      "Vi anpassar språk, tempo och form så att du kan delta på dina villkor."
+    ],
+    "statExperience": "Erfarenhet",
+    "statExperienceValue": "15+ år",
+    "statProjects": "Personer & familjer",
+    "statProjectsValue": "500+"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "intro": "Skriv kort vem du är och hur din vardag ser ut — särskilt om det gäller personlig assistans hemma eller ute i livet. Om du är under 18 behöver ofta en vuxen närstående eller god man kontakta oss. Vi återkommer inom några arbetsdagar.",
+    "apiNote": "Meddelanden sparas i er MongoDB via API:t under",
+    "success": "Tack! Vi har tagit emot ditt meddelande.",
+    "errorGeneric": "Något gick fel. Kontrollera att API:t körs och försök igen.",
+    "dismiss": "Stäng",
+    "name": "Namn",
+    "email": "E-post",
+    "company": "Kommun eller annan instans",
+    "companyOptional": "(valfritt)",
+    "message": "Meddelande",
+    "submit": "Skicka",
+    "submitting": "Skickar…"
+  }
+}

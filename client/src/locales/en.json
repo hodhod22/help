@@ -1,0 +1,132 @@
+{
+  "brand": {
+    "prefix": "Support",
+    "suffix": "Partner"
+  },
+  "meta": {
+    "title": "SupportPartner — Personal assistance at home and in daily life",
+    "description": "Our main focus is people who need personal assistance at home and in everyday life. We also support contact with Swedish social services and the Social Insurance Agency."
+  },
+  "nav": {
+    "language": "Language",
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "mainLabel": "Main navigation",
+    "mobileLabel": "Mobile navigation"
+  },
+  "header": {
+    "bookCall": "Book a call",
+    "menu": "Menu"
+  },
+  "footer": {
+    "tagline": "What matters most to us is people who need personal assistance at home and in daily life. We also support vulnerable children and adults, and others who need help in contact with social services and the Social Insurance Agency (Försäkringskassan).",
+    "quickLinks": "Quick links",
+    "contactHeading": "Contact",
+    "location": "Across Sweden — remote and in-person where possible",
+    "linkedin": "LinkedIn",
+    "rights": "SupportPartner. All rights reserved.",
+    "disclaimer": "We do not provide legal advice or make decisions for public agencies. When you need a lawyer or public counsel, we can help you understand where to turn."
+  },
+  "home": {
+    "eyebrow": "Personal assistance — at home and in everyday life",
+    "heroTitle": "Life at home and out in the world should work — with the personal assistance you need.",
+    "heroLead": "Our top priority is you if you need assistance at home and in daily life: rest, hygiene, meals, school, work, leisure, and participation. When social services or the Social Insurance Agency need to align with your assistance, we help you prepare and understand — at your pace, with respect for your privacy.",
+    "ctaPrimary": "Book an initial conversation",
+    "ctaSecondary": "Read about our services",
+    "whyTitle": "Why reach out to us?",
+    "whyLead": "We know assistance is about everyday life — not only paperwork. We also have experience of how the Social Insurance Agency and social services shape how assistance can work, and we meet you without judgement.",
+    "highlights": [
+      {
+        "id": "homeLife",
+        "title": "Home and everyday life first",
+        "text": "What matters most is that your personal assistance brings safety and participation where life happens: at home, in school, at work, and in leisure — based on what is important to you."
+      },
+      {
+        "id": "support",
+        "title": "You are met with respect",
+        "text": "We start from your needs, your privacy, and your wishes — regardless of background, language, or disability."
+      },
+      {
+        "id": "clarity",
+        "title": "When authorities touch your daily life",
+        "text": "When social services or the Social Insurance Agency affect your assistance, we help you prepare for meetings, structure documents, and understand next steps — so the focus can stay on life, not only on process."
+      }
+    ],
+    "bannerTitle": "Thinking about assistance at home or in daily life?",
+    "bannerLead": "A first conversation with no obligation — briefly describe your everyday life and what you want to achieve, and we can see if we are able to support you.",
+    "bannerCta": "Contact us"
+  },
+  "services": {
+    "title": "Services",
+    "intro": "Our main priority is you if you need personal assistance at home and in daily life. We also work with families and sometimes non-profit organisations — from a few hours to a small number of sessions, shaped to your situation.",
+    "items": [
+      {
+        "id": "personalAssist",
+        "title": "Personal assistance at home and in daily life",
+        "text": "This is our core focus: that assistance supports life where it is lived — sleep, meals, hygiene, school, work, leisure, and social life. We can help with planning, dialogue with assistants and relatives, and when social services and the Social Insurance Agency need to coordinate so you get stable support around the clock."
+      },
+      {
+        "id": "insurance",
+        "title": "Social Insurance Agency & disability allowance",
+        "text": "Review of applications and decisions that concern your finances around assistance and related benefits — and how to request reconsideration or add supporting documents."
+      },
+      {
+        "id": "social",
+        "title": "Social services & social assistance",
+        "text": "Support when social services touch your assistance or social assistance: needs assessments, child and family matters, sheltered housing, and other measures under the Swedish Social Services Act."
+      },
+      {
+        "id": "children",
+        "title": "Children and young people in vulnerability",
+        "text": "Support for children, young people, and guardians in contact with schools, social services, and health care — with extra attention to participation and safety."
+      },
+      {
+        "id": "disability",
+        "title": "Disability & the LSS Act",
+        "text": "Overview of support under the Swedish Act concerning Support and Service for Persons with Certain Functional Impairments (LSS), coordination of measures, and preparation for investigations and meetings."
+      },
+      {
+        "id": "appeals",
+        "title": "Reconsideration & appeals",
+        "text": "How to request reconsideration, important time limits, and what can be useful to document — without replacing legal advice."
+      },
+      {
+        "id": "coordination",
+        "title": "Coordination & accessibility",
+        "text": "When many agencies are involved: timelines, documentation, and needs for assistance, interpretation, or plain language in contacts."
+      }
+    ]
+  },
+  "about": {
+    "title": "About us",
+    "p1": "SupportPartner is a consultancy where the most important group is people who need personal assistance at home and in daily life. We also support vulnerable children and adults, and others who need help in contact with social services and the Social Insurance Agency. We have experience of how assistance, social insurance, and municipalities connect in practice.",
+    "p2": "We cannot fix everything for you and we do not make decisions for agencies — but we can make the path feel less lonely: explain, prepare, and stand by you when things feel overwhelming.",
+    "howTitle": "How we work",
+    "principles": [
+      "Your privacy and safety come first — especially in matters involving children and violence or threats.",
+      "We ground our work in current Swedish law and make clear when you need a lawyer, patient advisory service, or other specialist.",
+      "We adapt language, pace, and format so you can take part on your own terms."
+    ],
+    "statExperience": "Experience",
+    "statExperienceValue": "15+ years",
+    "statProjects": "People & families",
+    "statProjectsValue": "500+"
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Briefly say who you are and what your everyday life looks like — especially if it concerns personal assistance at home or out in life. If you are under 18, an adult relative or guardian often needs to contact us. We respond within a few business days.",
+    "apiNote": "Messages are stored in your MongoDB via the API at",
+    "success": "Thank you! We have received your message.",
+    "errorGeneric": "Something went wrong. Make sure the API is running and try again.",
+    "dismiss": "Dismiss",
+    "name": "Name",
+    "email": "Email",
+    "company": "Municipality or other agency",
+    "companyOptional": "(optional)",
+    "message": "Message",
+    "submit": "Send",
+    "submitting": "Sending…"
+  }
+}
