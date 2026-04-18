@@ -1,6 +1,8 @@
 import { Router } from "express";
 import ContactMessage from "../models/ContactMessage.js";
 import { contactMessage, pickLang } from "../lib/contactMessages.js";
+import { verifyToken } from "../lib/jwt.js";      // ← Importera verifyToken
+import User from "../models/User.js";             // ← Importera User-modellen
 const router = Router();
 
 router.post("/", async (req, res) => {
