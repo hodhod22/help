@@ -70,13 +70,12 @@ router.get("/me", async (req, res) => {
   }
 });
 
-// 🆕 Uppdatera profil (namn, avatar)
 router.put("/users/profile", protect, async (req, res) => {
   try {
-    const { name, avatar } = req.body;
+    const { name, phone, avatar } = req.body;
     const user = await User.findByIdAndUpdate(
       req.user.id,
-      { name, avatar },
+      { name, phone, avatar },
       { new: true, runValidators: true },
     ).select("-password");
     res.json(user);

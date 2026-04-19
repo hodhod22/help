@@ -143,7 +143,10 @@
     "save": "Spara",
     "saving": "Sparar...",
     "myMessages": "Mina meddelanden",
-    "noMessages": "Du har inga skickade meddelanden än."
+    "noMessages": "Du har inga skickade meddelanden än.",
+    "name": "Namn",
+    "phone": "Telefonnummer",
+    "phonePlaceholder": "t.ex. 0701234567"
   },
   "admin": {
     "dashboard": "Adminpanel",
@@ -157,14 +160,6 @@
     "role": "Roll",
     "actions": "Åtgärder",
     "edit": "Redigera"
-  },
-  "auth": {
-    "login": "Logga in",
-    "email": "E-post",
-    "password": "Lösenord",
-    "loggingIn": "Loggar in...",
-    "loginError": "Fel vid inloggning",
-    "loginWithGoogle": "Logga in med Google"
   },
   "auth": {
     "login": "Logga in",

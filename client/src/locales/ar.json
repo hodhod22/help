@@ -143,7 +143,10 @@
     "save": "حفظ",
     "saving": "جاري الحفظ...",
     "myMessages": "رسائلي",
-    "noMessages": "لم ترسل أي رسائل بعد."
+    "noMessages": "لم ترسل أي رسائل بعد.",
+    "name": "الاسم",
+    "phone": "رقم الهاتف",
+    "phonePlaceholder": "مثلاً 0701234567"
   },
   "admin": {
     "dashboard": "لوحة التحكم",
@@ -157,14 +160,6 @@
     "role": "الدور",
     "actions": "إجراءات",
     "edit": "تعديل"
-  },
-  "auth": {
-    "login": "تسجيل الدخول",
-    "email": "البريد الإلكتروني",
-    "password": "كلمة المرور",
-    "loggingIn": "جاري تسجيل الدخول...",
-    "loginError": "فشل تسجيل الدخول",
-    "loginWithGoogle": "تسجيل الدخول عبر Google"
   },
   "auth": {
     "login": "تسجيل الدخول",
